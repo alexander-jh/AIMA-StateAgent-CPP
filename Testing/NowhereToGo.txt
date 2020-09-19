@@ -1,0 +1,2 @@
+1,CLEAR,0
+2,BOULDER,2
