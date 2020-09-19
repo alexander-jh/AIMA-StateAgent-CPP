@@ -248,7 +248,7 @@ std::string StateRover::RuleMatch(State *state) const {
 
 /* rule passed as reference to avoid copying */
 Action::Type StateRover::RuleAction(std::string const *rule) {
-    return this->rules.at(*rule);
+    return this->rules[*rule];
 }
 
 void StateRover::printTermination(int totalMoves, int samplesCollected) {
