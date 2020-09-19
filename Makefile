@@ -5,6 +5,7 @@
 #
 
 CC		= g++
+STD		= -std=c++11
 LIBS	= ReflexAgent.hpp ReflexAgent.cpp RoverSensors.hh RoverSensors.cc
 REFLEX	= ReflexRover
 STATE	= StateRover
@@ -14,13 +15,13 @@ TEST   	= ReflexAgentUnitTesting
 all: Reflex State
 
 Reflex:
-	$(CC) -o $(REFLEX) $(REFLEX).cpp $(LIBS)
+	$(CC) $(STD) -o $(REFLEX) $(REFLEX).cpp $(LIBS)
 
 State:
-	$(CC) -o $(STATE) $(STATE).cpp $(LIBS)
+	$(CC) $(STD) -o $(STATE) $(STATE).cpp $(LIBS)
 
 UnitTest:
-	$(CC) -D UNIT_TEST -o $(TEST) $(TEST).cpp $(LIBS) $(CATCH)
+	$(CC) $(STD) -D UNIT_TEST -o $(TEST) $(TEST).cpp $(LIBS) $(CATCH)
 	./$(TEST)
 	rm -rf $(TEST)
 

@@ -235,9 +235,9 @@ std::string StateRover::RuleMatch(State *state) const {
         if(state->vision == "BOULDER" || state->vision == "NULL") {
             temp[1] = 'N';
         } else {
-            temp[1] = state->vision.at(0);
+            temp[1] = state->vision[0];
         }
-        temp[2] = state->direction.at(0);
+        temp[2] = state->direction[0];
         /* Force conversion of int to ASCII */
         temp[3] = (char) ('0' + state->pos_y);
         /* Force cast of char* to std::string */

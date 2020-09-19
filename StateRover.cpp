@@ -12,8 +12,8 @@ int main(int argc, char **args) {
         std::cout << "ERROR: No valid file.\n";
     } else {
         /* Declare new rover object and percept instance */
-        StateRover stateRover = StateRover();
         MovingRoverSensors percept = MovingRoverSensors(args[1]);
+        StateRover stateRover = StateRover();
         /* Execute program until ReflexAgentWithState returns false */
         while (stateRover.ReflexAgentWithState(&percept));
     }
