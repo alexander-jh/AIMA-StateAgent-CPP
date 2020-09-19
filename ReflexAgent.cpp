@@ -109,8 +109,8 @@ StateRover::StateRover() {
 
 bool StateRover::ReflexAgentWithState(MovingRoverSensors *percept) {
     UpdateState(&(this->current), percept);
-    std::string const rule = RuleMatch(&(this->current));
-    this->current.lastAction = RuleAction(&rule);
+    std::string rule = RuleMatch(&(this->current));
+    this->current.lastAction = RuleAction(rule);
     /* If the Action::Type returned is NONE, then the agent terminates */
     bool atEnd = (this->current.lastAction == Action::Type::NONE);
 #ifdef UNIT_TEST
@@ -247,8 +247,8 @@ std::string StateRover::RuleMatch(State *state) const {
 }
 
 /* rule passed as reference to avoid copying */
-Action::Type StateRover::RuleAction(std::string const *rule) {
-    return this->rules[*rule];
+Action::Type StateRover::RuleAction(std::string rule) {
+    return this->rules[rule];
 }
 
 void StateRover::printTermination(int totalMoves, int samplesCollected) {

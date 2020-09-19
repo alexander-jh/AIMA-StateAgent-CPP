@@ -168,7 +168,7 @@ private:
     void UpdateState(State *state, MovingRoverSensors *percept);
     static void BuildRules(std::unordered_map<std::string, Action::Type> *table);
     std::string RuleMatch(State *state) const;
-    Action::Type RuleAction(const std::string *rule);
+    Action::Type RuleAction(std::string rule);
     bool HaveSearched(int soilId);
     static void printTermination(int totalMoves, int samplesCollected);
     static void printState(State *state);
