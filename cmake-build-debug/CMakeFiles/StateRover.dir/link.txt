@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/StateRover.dir/StateRover.cpp.o CMakeFiles/StateRover.dir/ReflexAgent.cpp.o CMakeFiles/StateRover.dir/RoverSensors.cc.o  -o StateRover 
